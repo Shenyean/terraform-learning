@@ -6,14 +6,14 @@ resource "aws_instance" "public" {
     key_name = "yeosy-tf-2801"
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     tags = {
-        Name = "yeosy-ec2"
+        "Name" = "yeosy-ec2"
     }
 }
 
 resource "aws_security_group" "allow_ssh" {
     name = "yeosy-sg-2802"
     description = "Allow SSH inbound"
-    vpc_id = "vpc-024ab25ff63a3d405"
+    vpc_id = data.aws_vpc.selected
 }
 
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
