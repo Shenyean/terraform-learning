@@ -10,6 +10,6 @@ variable "subnet_id" {
   description = "this is the subnet id (ultimate aim is to pull it from the system)"
   default = "subnet-048a1bb9312e319aa"
 }
-variable "" {
+# variable "" {
   
-}
+# }
