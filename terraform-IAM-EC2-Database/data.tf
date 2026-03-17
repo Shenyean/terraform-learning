@@ -22,5 +22,10 @@ statement {
    actions   = ["s3:ListAllMyBuckets"]
    resources = ["*"]
  }
+ statement {
+   effect    = "Allow"
+   actions   = ["DynamoDB:PutItem"]
+   resources = ["*"]
+ }
 
 }
