@@ -3,9 +3,9 @@
 resource "aws_instance" "public" {
   ami                         = "ami-0ac0e4288aa341886"
   instance_type               = "t2.micro"
-  subnet_id                   = "subnet-07613369be510e0d0" #Public Subnet ID, e.g. subnet-xxxxxxxxxxx
+  subnet_id                   = "subnet-05cd8a01d22a5ccaf" #Public Subnet ID, e.g. subnet-xxxxxxxxxxx
   associate_public_ip_address = true
-  key_name                    = "yeosy-050326" #Change to your keyname, e.g. jazeel-key-pair
+  key_name                    = "yeosy-060326" #Change to your keyname, e.g. jazeel-key-pair
   vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
 
   tags = {
